@@ -17,10 +17,10 @@ app.set("view engine", "ejs")
 app.use(expressLayouts)
 app.set("views", path.resolve("views"))
 app.set("layout", "layouts/layout")
-app.use(express.static("public"))
+app.use(express.static(__dirname + "/public"))
 app.use(router)
 // app.use()
-database(process.env.DATABASE_URL)
+database("mongodb+srv://upgraderboy:VTCQutTsr2SDoT2A@cluster0.3wreb4r.mongodb.net/?retryWrites=true&w=majority")
 // Listening by the server
 console.log('='.repeat(100))
 app.listen(PORT, () => {
